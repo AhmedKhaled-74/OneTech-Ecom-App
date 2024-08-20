@@ -25,6 +25,7 @@ img {
   width: 100%;
   display: block;
 }
+
 /* Helper Classes  */
 
 .sale::after {
@@ -34,6 +35,9 @@ img {
 .new::after {
   content: "New";
   background-color: var(--main-color);
+}
+.text-main-color {
+  color: var(--main-color);
 }
 /* header section*/
 .navbar-brand {
@@ -140,7 +144,8 @@ header {
 .cat-pick.dropdown-toggle::after {
   content: none;
 }
-.num-cart {
+.num-cart,
+.num-wish {
   width: 20px;
   aspect-ratio: 1;
   background-color: var(--main-color);
@@ -154,7 +159,9 @@ header {
   top: 35%;
   right: -20%;
 }
-
+.btn-remove {
+  background-color: #ff3333 !important;
+}
 /* hero section*/
 .hero {
   display: flex;
@@ -419,6 +426,13 @@ header {
         box-shadow: 0 0 12px 4px var(--sec-color);
         color: #ff3333;
       }
+      & i {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
     }
   }
 }
@@ -435,12 +449,42 @@ header {
   }
 }
 
+/* Footer Section */
+.icon-send {
+  & i {
+    color: var(--main-color);
+  }
+}
+.coupon {
+  box-shadow: 0px 8px 18px 2px var(--sec-color);
+}
+.icon-link {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--main-color);
+  margin: 16px 0;
+  border-radius: 50%;
+  transition: all 0.25s;
+  color: white;
+  & i {
+    font-size: 20px;
+  }
+  &:hover {
+    opacity: 0.7;
+  }
+}
+.imgs-logos img {
+  width: 24px;
+}
 /* Aside Section */
 /* Arrow */
 .arrowUp {
   position: fixed;
   bottom: 24px;
-  right: 50px;
+  right: 24px;
   transition: all 0.25s;
   opacity: 0;
   visibility: hidden;
@@ -465,6 +509,9 @@ header {
   visibility: visible;
   pointer-events: all;
 }
+
+/*  Loading  */
+
 .loading {
   display: flex;
   align-items: center;
@@ -473,5 +520,37 @@ header {
   z-index: 99999;
   background-color: var(--main-color);
   inset: 0;
+  transition: all 0.5s;
 }
-/*    */
+/********/
+/* Cart Section */
+/********/
+.img-cart-container {
+  & img {
+    width: 90px;
+    @media screen and (max-width: 768px) {
+      width: 70px;
+    }
+  }
+}
+.crudBtn {
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+}
+.noCart,
+.noWish {
+  width: 80%;
+  max-width: 600px;
+  margin: 36px auto;
+}
+.noWish {
+  max-width: 400px;
+}
+.wish-remove {
+  background-color: #ff3333;
+  color: var(--sec-color);
+  &:hover {
+    background-color: white;
+  }
+}

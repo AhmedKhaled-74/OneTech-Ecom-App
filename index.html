@@ -58,7 +58,12 @@
           <div
             class="wishlist d-flex gap-2 align-items-center justify-content-center"
           >
-            <img src="./imgs/download.webp" alt="" />
+            <a href="./wish.html">
+              <div class="wish-img position-relative">
+                <img src="./imgs/download.webp" alt="" />
+                <div class="num-wish"></div>
+              </div>
+            </a>
             <div class="wish-head-txt">
               <h6>Wishlist</h6>
               <small>115</small>
@@ -67,10 +72,12 @@
           <div
             class="Cart d-flex gap-2 align-items-center justify-content-center"
           >
-            <div class="img-cart position-relative">
-              <img src="./imgs/download (4).webp" alt="" />
-              <div class="num-cart">10</div>
-            </div>
+            <a href="./cart.html">
+              <div class="img-cart position-relative">
+                <img src="./imgs/download (4).webp" alt="" />
+                <div class="num-cart"></div>
+              </div>
+            </a>
             <div class="wish-head-txt">
               <h6>Cart</h6>
               <small>85$</small>
@@ -154,8 +161,8 @@
                 >Pages</a
               >
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="cart.html">Cart</a></li>
+                <li><a class="dropdown-item" href="wish.html">WishList</a></li>
                 <li>
                   <a class="dropdown-item" href="#">Something else here</a>
                 </li>
@@ -172,7 +179,7 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" aria-current="page" href="#"
+              <a class="nav-link text-white" aria-current="page" href="#contact"
                 >Contact</a
               >
             </li>
@@ -1085,7 +1092,7 @@
       </section>
 
       <!-- Trends Section -->
-      <section id="#trends" class="py-5 trends">
+      <section id="trends" class="py-5 trends">
         <div class="container">
           <h4 class="border-bottom pb-3 border-3 mb-5">Trends in 2021</h4>
           <div class="trends-conrainer">
@@ -1094,7 +1101,7 @@
             <div class="trend-flex">
               <div class="trend p-4 rounded-3 bg-white position-relative">
                 <div class="new"></div>
-                <div class="fav"><i class="fa-solid fa-heart"></i></div>
+                <button class="fav"><i class="fa-solid fa-heart"></i></button>
                 <img
                   src="./imgs/xnew_8.jpg.pagespeed.ic.lAcp8-nlW0.webp"
                   alt=""
@@ -1108,7 +1115,7 @@
               </div>
               <div class="trend p-4 rounded-3 bg-white position-relative">
                 <div class="new"></div>
-                <div class="fav"><i class="fa-solid fa-heart"></i></div>
+                <button class="fav"><i class="fa-solid fa-heart"></i></button>
                 <img
                   src="./imgs/xnew_7.jpg.pagespeed.ic.CWzzc10GcH.webp"
                   alt=""
@@ -1122,7 +1129,7 @@
               </div>
               <div class="trend p-4 rounded-3 bg-white position-relative">
                 <div class="new"></div>
-                <div class="fav"><i class="fa-solid fa-heart"></i></div>
+                <button class="fav"><i class="fa-solid fa-heart"></i></button>
                 <img
                   src="./imgs/xnew_7.jpg.pagespeed.ic.CWzzc10GcH.webp"
                   alt=""
@@ -1136,7 +1143,7 @@
               </div>
               <div class="trend p-4 rounded-3 bg-white position-relative">
                 <div class="new"></div>
-                <div class="fav"><i class="fa-solid fa-heart"></i></div>
+                <button class="fav"><i class="fa-solid fa-heart"></i></button>
                 <img
                   src="./imgs/xnew_7.jpg.pagespeed.ic.CWzzc10GcH.webp"
                   alt=""
@@ -1150,7 +1157,7 @@
               </div>
               <div class="trend p-4 rounded-3 bg-white position-relative">
                 <div class="new"></div>
-                <div class="fav"><i class="fa-solid fa-heart"></i></div>
+                <button class="fav"><i class="fa-solid fa-heart"></i></button>
                 <img
                   src="./imgs/xnew_7.jpg.pagespeed.ic.CWzzc10GcH.webp"
                   alt=""
@@ -1164,7 +1171,7 @@
               </div>
               <div class="trend p-4 rounded-3 bg-white position-relative">
                 <div class="new"></div>
-                <div class="fav"><i class="fa-solid fa-heart"></i></div>
+                <button class="fav"><i class="fa-solid fa-heart"></i></button>
                 <img
                   src="./imgs/xnew_7.jpg.pagespeed.ic.CWzzc10GcH.webp"
                   alt=""
@@ -1178,7 +1185,7 @@
               </div>
               <div class="trend p-4 rounded-3 bg-white position-relative">
                 <div class="new"></div>
-                <div class="fav"><i class="fa-solid fa-heart"></i></div>
+                <button class="fav"><i class="fa-solid fa-heart"></i></button>
                 <img
                   src="./imgs/xnew_3.jpg.pagespeed.ic.5huJuP7Vcc.webp"
                   alt=""
@@ -1196,7 +1203,7 @@
       </section>
 
       <!-- Brands Section -->
-      <section id="#brands" class="brands py-5">
+      <section id="brands" class="brands py-5">
         <div class="container">
           <div class="brands-container">
             <ul class="brands-flex">
@@ -1253,7 +1260,142 @@
         </div>
       </section>
     </main>
+    <footer id="contact" class="mt-4 pt-5">
+      <div class="container coupon py-4">
+        <div class="row justify-content-between g-4 align-items-start p-4">
+          <div
+            class="coupon-content d-flex align-items-center justify-content-center gap-4 col-12 col-lg-4"
+          >
+            <div class="icon-send">
+              <i class="fa-regular fa-paper-plane fa-3x"></i>
+            </div>
+            <div class="coupon-text">
+              <h5>Sign up for Newsletter</h5>
+              <p class="text-secondary">
+                ...and receive %20 coupon for first shopping.
+              </p>
+            </div>
+          </div>
+          <form
+            class="d-flex form-search flex-column align-items-center flex-sm-row col-12 col-lg-7 gap-3 gap-sm-0"
+            role="search"
+          >
+            <input
+              class="form-control border-2 rounded-2 border"
+              type="search"
+              placeholder="Enter Your Email"
+            />
 
+            <button
+              class="btn btn-search d-inline-block rounded-2 w-25 py-2"
+              type="submit"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="container footer-links-box py-5">
+        <div class="row g-4">
+          <div class="logo-footer-box d-flex flex-column gap-3 col-12 col-lg-4">
+            <h2>OneTech</h2>
+            <p>Got Question? Call Us 24/7</p>
+            <a
+              class="d-block text-main-color"
+              href="tel:+38 068 005 3570"
+              class="d-block text-main-color fs-5"
+              >+38 068 005 3570</a
+            >
+            <a
+              href="mailto:+38 068 005 3570"
+              class="d-block text-main-color fs-5"
+              >ahmed.khaled111445@gmail.com</a
+            >
+            <p>17 Princess Road, London Grester London NW18JR, UK</p>
+            <div class="links d-flex gap-2">
+              <a class="icon-link" href=""
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+              <a class="icon-link" href=""
+                ><i class="fa-brands fa-x-twitter"></i
+              ></a>
+              <a class="icon-link" href=""
+                ><i class="fa-brands fa-youtube"></i
+              ></a>
+              <a class="icon-link" href=""
+                ><i class="fa-brands fa-google"></i
+              ></a>
+            </div>
+          </div>
+          <div class="fast-links col-12 col-lg-4">
+            <h6 class="mb-4">Find it Fast</h6>
+            <ul class="p-0 d-flex flex-column gap-2">
+              <li>
+                <a href="" class="small text-secondary">Computers&Laptops</a>
+              </li>
+              <li>
+                <a href="" class="small text-secondary">Computers&Laptops</a>
+              </li>
+              <li>
+                <a href="" class="small text-secondary">Computers&Laptops</a>
+              </li>
+              <li>
+                <a href="" class="small text-secondary">Computers&Laptops</a>
+              </li>
+              <li>
+                <a href="" class="small text-secondary">Computers&Laptops</a>
+              </li>
+              <li>
+                <a href="" class="small text-secondary">Computers&Laptops</a>
+              </li>
+              <li>
+                <a href="" class="small text-secondary">Computers&Laptops</a>
+              </li>
+            </ul>
+          </div>
+          <div class="fast-links col-12 col-lg-4">
+            <h6 class="mb-4">Customer Care</h6>
+            <ul class="p-0 d-flex flex-column gap-2">
+              <li>
+                <a href="" class="small text-secondary">My Account</a>
+              </li>
+              <li>
+                <a href="" class="small text-secondary">My Account</a>
+              </li>
+              <li>
+                <a href="" class="small text-secondary">My Account</a>
+              </li>
+              <li>
+                <a href="" class="small text-secondary">My Account</a>
+              </li>
+              <li>
+                <a href="" class="small text-secondary">My Account</a>
+              </li>
+              <li>
+                <a href="" class="small text-secondary">My Account</a>
+              </li>
+              <li>
+                <a href="" class="small text-secondary">My Account</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div
+        class="copyright container py-4 d-flex justify-content-between align-items-center flex-column flex-md-row"
+      >
+        <p class="small text-secondary">
+          Copyright ©2021 All rights reserved | This template is made by
+          <span class="text-main-color">Triple-O</span>
+        </p>
+        <div class="imgs-logos d-flex gap-3 align-items-center me-md-5">
+          <a href=""><img src="./imgs/footer1.webp" alt="" /></a>
+          <a href=""><img src="./imgs/footer2.webp" alt="" /></a>
+          <a href=""><img src="./imgs/footer3.webp" alt="" /></a>
+          <a href=""><img src="./imgs/footer4.webp" alt="" /></a>
+        </div>
+      </div>
+    </footer>
     <!-- Aside -->
     <!-- upperArrow -->
     <aside class="arrowUp">
@@ -1263,7 +1405,10 @@
         ><i class="fa-solid fa-chevron-up fa-xl"></i
       ></a>
     </aside>
-    <aside class="loading"></aside>
+    <aside class="loading opacity-1">
+      <i class="fa-solid fa-5x fa-spinner fa-spin-pulse text-white"></i>
+    </aside>
+
     <script src="./js/bootstrap.bundle.min.js" defer></script>
     <script src="./js/script.js" defer></script>
   </body>
