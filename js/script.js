@@ -44,10 +44,17 @@ addBtns.forEach((btn, ind) => {
     }
   }
 });
+let totalPriceText = document.querySelector(".total-price");
 function displayCart() {
+  let totalPrice = 0;
   numOfCart = cart.length;
   numCart.innerHTML = numOfCart;
+  for (let i = 0; i < cart.length; i++) {
+    totalPrice += cart[i].price.substring(1) * cart[i].count;
+  }
+  totalPriceText.innerHTML = "$ " + totalPrice;
 }
+
 displayCart();
 
 // Wish //
@@ -169,8 +176,18 @@ let x = 0;
 
 nextBtnTrend.addEventListener("click", () => {
   x += 100;
-  if (x > trends.clientWidth - 900) {
-    x = trends.clientWidth - 900;
+  if (window.screen.width < 550) {
+    if (x > trends.clientWidth - 250) {
+      x = trends.clientWidth - 250;
+    }
+  } else if (window.screen.width < 950) {
+    if (x > trends.clientWidth - 600) {
+      x = trends.clientWidth - 600;
+    }
+  } else {
+    if (x > trends.clientWidth - 800) {
+      x = trends.clientWidth - 800;
+    }
   }
   trends.style.transform = `translateX(${-x}px)`;
 });

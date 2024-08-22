@@ -25,8 +25,6 @@ if (cart.length < 1) {
   noCart.classList.add("d-none");
   payBtn.classList.remove("d-none");
 }
-let inputsCount = Array.from(document.querySelectorAll(".inputCount"));
-let btnsEdit = Array.from(document.querySelectorAll(".editBtn"));
 
 function displayCart() {
   let box = "";
@@ -84,7 +82,14 @@ function deleItem(i) {
     resetCart();
   }
 }
+let inputsCount = [];
+let btnsEdit = [];
+
 function editItem(i) {
+  inputsCount = Array.from(document.querySelectorAll(".inputCount"));
+
+  btnsEdit = Array.from(document.querySelectorAll(".editBtn"));
+
   inputsCount[i].removeAttribute("disabled");
   btnsEdit[i].innerHTML = "Done";
   inputsCount[i].focus();
@@ -92,8 +97,6 @@ function editItem(i) {
   btnsEdit[i].classList.replace("btn-warning", "btn-success");
   inputsCount[i].addEventListener("blur", () => {
     cart[i].count = +inputsCount[i].value;
-    console.log(cart);
-
     localStorage.setItem("CartArray", JSON.stringify(cart));
     inputsCount[i].setAttribute("disabled", "");
     btnsEdit[i].innerHTML = "Edit";
@@ -105,7 +108,7 @@ function editItem(i) {
     } else if (cart.length === 1 && +inputsCount[i].value === 0) {
       resetCart();
     }
-    location.reload();
+    // location.reload();
   });
 }
 

@@ -92,10 +92,13 @@ li a:hover {
   width: 80%;
 }
 .do-fav {
-  text-align: right;
+  text-align: center;
   width: 60%;
   & img {
     width: 28px;
+  }
+  & .wish-img img {
+    width: 34px;
   }
   & .wish-head-txt {
     display: flex;
@@ -211,6 +214,7 @@ header {
   display: flex;
   gap: 16px;
 }
+
 .buttons-cursel button {
   background-color: none;
   border: none;
@@ -218,6 +222,13 @@ header {
 }
 .cursel-super {
   box-shadow: 0 0 12px 1px #0000001b;
+  @media screen and (max-width: 992px) {
+    width: 70%;
+    margin: auto;
+  }
+  @media screen and (max-width: 464px) {
+    width: 100%;
+  }
 }
 .carousel-control-next,
 .carousel-control-prev {
